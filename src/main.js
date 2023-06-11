@@ -4,12 +4,13 @@ import router from './router'
 import ElementPlus from 'element-plus'
 import tsyvue from 'tsyvue'
 import VueCropper from "vue-cropper";
+
 import _ from 'lodash'
 
 import utils from "@/utils.js";
-import Editor from "./components/mavon-editor-wrapper.vue";
+import Editor from "@/components/mavon-editor-wrapper.vue";
+import LinkItem from '@/components/link-item.vue';
 import PanoViewer from "./components/pano-viewer/pano-viewer.vue";
-import Link from "./components/link-item.vue";
 import ImageCropper from "./components/image-cropper.vue";
 
 // CSS
@@ -106,10 +107,10 @@ app.use(tsyvue)
 app.use(ElementPlus)
 app.use(VueCropper)
 app.mixin(globalMixin)
-app.component(Editor)
-app.component(PanoViewer)
-app.component(Link)
-app.component(ImageCropper)
+app.component('m-editor', Editor)
+app.component('pano-viewer', PanoViewer)
+app.component('link-item', LinkItem)
+app.component('image-cropper', ImageCropper)
 app.mount('#app')
 
 Date.prototype.format = function (fmt = "yyyy-MM-dd hh:mm:ss") {

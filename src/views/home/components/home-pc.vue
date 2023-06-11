@@ -56,10 +56,6 @@
       .block-section
         line-point-canvas
       
-      .block-section
-        .title 快乐时光
-        photo-list
-      
       .block-section(@click='goto("learning-004")')
         grid-layout
 
@@ -75,7 +71,7 @@
         sy-pagin-data(url='/public/artical/list' :query='query1')
           template(v-slot:='scope')
             .data-row(v-for='(row, idx) of scope.data' :key='idx')
-              ll(:text='row.title' :data='row' @click='showArtical')
+              link-item(:text='row.title' :data='row' @click='showArtical')
       
   
 
@@ -84,7 +80,7 @@
         sy-pagin-data(url='/public/artical/list' :query='query2')
           template(v-slot:='scope')
             .data-row(v-for='(row, idx) of scope.data' :key='idx')
-              ll(:text='row.title' :data='row' @click='showArtical')
+              link-item(:text='row.title' :data='row' @click='showArtical')
 
 
   

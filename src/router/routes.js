@@ -78,6 +78,12 @@ export default [
     component: () => import("@/views/pano/pano-update-index.vue"),
   },
   {
+    path: "/pano/viewer/test",
+    name: "pano-viewer-test",
+    meta: {},
+    component: () => import("@/views/pano/pano-viewer-test.vue"),
+  },
+  {
     path: "/pano/:id/viewer",
     name: "pano-viewer",
     meta: {},
