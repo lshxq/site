@@ -1,6 +1,6 @@
 <template lang="pug">
 .mavon-editor-main
-  mavon-editor.mavon-editor-panel(:value='valueComputed' ref='mdRef' @imgAdd="imgAdd" :toolbars='toolbars' @input='updateValue' v-bind='$attrs')
+  mavon-editor.mavon-editor-panel(:model-value='valueComputed' ref='mdRef' @imgAdd="imgAdd" :toolbars='toolbars' @update:model-value='updateValue' v-bind='$attrs')
   image-cropper(
     v-if='imageCropperData' 
     :img='imageCropperData.image' 
@@ -15,7 +15,7 @@
 <script>
 export default {
   props: {
-    value: String,
+    modelValue: String,
     imageUploadFolder: {
       type: String,
       default() {
@@ -41,7 +41,7 @@ export default {
           imagelink: true, // 图片链接
           code: true, // code
           table: true, // 表格
-          fullscreen: true, // 全屏编辑
+          fullscreen: false, // 全屏编辑
           readmodel: true, // 沉浸式阅读
           htmlcode: true, // 展示html源码
           help: true, // 帮助
@@ -71,7 +71,7 @@ export default {
   computed: {
     valueComputed: {
       get() {
-        return this.value;
+        return this.modelValue;
       },
       set(value) {
         this.updateValue(value);
@@ -80,7 +80,7 @@ export default {
   },
   methods: {
     updateValue(value) {
-      this.$emit("input", value);
+      this.$emit("update:modelValue", value);
     },
     imageCanceled() {
       const that = this;

@@ -2,10 +2,11 @@
 .blog-viewer-index-main(v-loading='loading')
   .narrow
     sy-left-right
-      template(slot='left')
+      template(v-slot:left)
         .title {{blog.title}}
-      template(slot='right')
+      template(v-slot:right)
         .created {{long2datetime(blog.created)}}
+        
     mavon-editor.mavon-view-panel(
       :value='blog.content' 
       default-open='preview'

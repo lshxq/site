@@ -4409,12 +4409,12 @@
   dependencies:
     "semver" "^6.0.0"
 
-"mavon-editor@^2.10.4":
-  "integrity" "sha512-CFsBLkgt/KZBDg+SJYe2fyYv4zClY149PiwpH0rDAiiP4ae1XNs0GC8nBsoTeipsHcebDLN1QMkt3bUsnMDjQw=="
-  "resolved" "https://registry.npmjs.org/mavon-editor/-/mavon-editor-2.10.4.tgz"
-  "version" "2.10.4"
+"mavon-editor@^3.0.1":
+  "integrity" "sha512-973cYCwv+AB+fcecsU6Ua6UXATxDMaY0Q7QzKQ/GmRW1sg+3DolZDnCGXth7XHDgrmqKTO57N42fVYujt0wfFw=="
+  "resolved" "https://registry.npmjs.org/mavon-editor/-/mavon-editor-3.0.1.tgz"
+  "version" "3.0.1"
   dependencies:
-    "xss" "^1.0.6"
+    "xss" "^1.0.10"
 
 "mdn-data@2.0.14":
   "integrity" "sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow=="
@@ -6672,7 +6672,7 @@
   "resolved" "https://registry.npmmirror.com/ws/-/ws-8.13.0.tgz"
   "version" "8.13.0"
 
-"xss@^1.0.6":
+"xss@^1.0.10":
   "integrity" "sha512-og7TEJhXvn1a7kzZGQ7ETjdQVS2UfZyTlsEdDOqvQF7GoxNfY+0YLCzBy1kPdsDDx4QuNAonQPddpsn6Xl/7sw=="
   "resolved" "https://registry.npmjs.org/xss/-/xss-1.0.14.tgz"
   "version" "1.0.14"

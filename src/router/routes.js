@@ -97,5 +97,12 @@ export default [
     },
     component: () => import("@/views/pano/pano-editor-index.vue"),
   },
+
+  {
+    path: "/m-editor/test",
+    name: "m-editor-test",
+    component: () => import("@/views/m-editor-test.vue"),
+  },
+
   ...learnings,
 ];

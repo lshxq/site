@@ -4,8 +4,7 @@ import router from './router'
 import ElementPlus from 'element-plus'
 import tsyvue from 'tsyvue'
 import VueCropper from "vue-cropper"
-import MavonEditor from 'mavon-editor'
-
+import {mavonEditor} from 'mavon-editor'
 import _ from 'lodash'
 
 import utils from "@/utils.js";
@@ -109,7 +108,7 @@ app.use(tsyvue)
 app.use(ElementPlus)
 app.use(VueCropper)
 app.mixin(globalMixin)
-app.component('mavon-editor', MavonEditor)
+app.component('mavon-editor', mavonEditor)
 app.component('m-editor', Editor)
 app.component('pano-viewer', PanoViewer)
 app.component('link-item', LinkItem)
