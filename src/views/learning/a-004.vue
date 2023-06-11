@@ -2,7 +2,7 @@
 .learning004-main 
   grid-layout
   
-  editor.mavon-view-panel(
+  m-editor.mavon-view-panel(
     :value='text' 
     default-open='preview'
     :editable='false'

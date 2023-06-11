@@ -25,7 +25,7 @@
       el-input(v-model.trim='modified.title')
 
     el-form-item(label='正文' prop='content')
-      editor.mavon-editor-panel(v-model='modified.content' image-upload-folder='pano')
+      m-editor.mavon-editor-panel(v-model='modified.content' image-upload-folder='pano')
 
     el-form-item(label='海拔高度' prop='high')
       el-input-number(v-model='modified.high' :min='-100' :max='3000')

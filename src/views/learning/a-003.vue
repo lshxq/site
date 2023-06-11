@@ -8,7 +8,7 @@
     :img5="getUploadedResource('img/20220311102928.jpg')"
   )
   
-  editor.mavon-view-panel(
+  m-editor.mavon-view-panel(
     :value='text' 
     default-open='preview'
     :editable='false'

@@ -2,7 +2,7 @@
 .learning005-main(v-resize='updateSize')
   
   
-  editor.mavon-view-panel(
+  m-editor.mavon-view-panel(
     :value='text' 
     default-open='preview'
     :editable='false'

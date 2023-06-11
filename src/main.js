@@ -3,7 +3,8 @@ import App from './App.vue'
 import router from './router'
 import ElementPlus from 'element-plus'
 import tsyvue from 'tsyvue'
-import VueCropper from "vue-cropper";
+import VueCropper from "vue-cropper"
+import MavonEditor from 'mavon-editor'
 
 import _ from 'lodash'
 
@@ -16,6 +17,7 @@ import ImageCropper from "./components/image-cropper.vue";
 // CSS
 import 'element-plus/dist/index.css'
 import './assets/main.sass'
+import 'mavon-editor/dist/css/index.css'
 
 const globalMixin = {
   methods: {
@@ -107,6 +109,7 @@ app.use(tsyvue)
 app.use(ElementPlus)
 app.use(VueCropper)
 app.mixin(globalMixin)
+app.component('mavon-editor', MavonEditor)
 app.component('m-editor', Editor)
 app.component('pano-viewer', PanoViewer)
 app.component('link-item', LinkItem)

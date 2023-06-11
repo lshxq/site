@@ -6,7 +6,7 @@
     el-form-item(label='类型' prop='type')
       sy-options(type='2' :options='articalTypeOptions' v-model='modified.type')
     el-form-item(label='正文' prop='content')
-      editor.mavon-editor-panel(v-model='modified.content' image-upload-folder='blog')
+      m-editor.mavon-editor-panel(v-model='modified.content' image-upload-folder='blog')
     el-form-item()
       el-button(type='primary' @click='apply') 保存
       el-button(@click='canceled') 取消
