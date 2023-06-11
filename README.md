@@ -1,5 +1,7 @@
 # site
 
+Vue3 supported
+
 ## Project setup
 ```
 yarn install
