@@ -14,7 +14,7 @@
     "lodash": "^4.17.21",
     "photo-sphere-viewer": "^4.8.1",
     "pug-plain-loader": "^1.1.0",
-    "tsyvue": "^0.1.28",
+    "tsyvue": "^0.1.29",
     "vue": "^3.2.13",
     "vue-cropper": "^0.6.2",
     "vue-router": "^4.0.3"

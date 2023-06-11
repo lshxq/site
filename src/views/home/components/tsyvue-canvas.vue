@@ -41,7 +41,7 @@ export default {
 
   methods: {
     gotoTsyvue() {
-      location.href='/tsyvue/homve'
+      location.href='/tsyvue/home'
     },
     sentText(text, fontSize = 100, stepV = 40) {
       const { ctx, canvasWidth: width, canvasHeight: height } = this;

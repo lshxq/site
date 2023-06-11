@@ -10,26 +10,30 @@
     
     .body
       .flex-center.mt30
-        .calendar-row
-          sy-left-right
-            template(v-slot:left)
-              .calendar-panel
-                sy-calendar.mr10(v-model='selectedDate' v-slot:left)
+        sy-left-right(left-width='350')
+          template(v-slot:left)
+              sy-calendar.mr10(v-model='selectedDate' v-slot:left)
 
-            template(v-slot:right)
-              .card-panel
-                sy-ray-border.ml30(:width='200' :height='300' :radius='5')
-                  .tsy-panel 
-                    .name Tian 
-                    .num 21
-                sy-ray-border.ml10(:width='200' :height='300' :radius='5')
-                  .tsy-panel 
-                    .name UC 
-                    .num 90
-                sy-ray-border.ml10(:width='200' :height='300' :radius='5')
-                  .tsy-panel 
-                    .name YC 
-                    .num 15
+          template(v-slot:right)
+            .flex-center
+              sy-ray-border.ml10(:width='200' :height='300' :radius='5')
+                img.game-image(src='/site/assets/poker.png' @click='goto2("/poker")')
+
+              sy-ray-border.ml10(:width='200' :height='300' :radius='5')
+                img.game-image(src='/site/assets/miao.png'  @click='goto2("/miao")')
+
+              sy-ray-border.ml10(:width='200' :height='300' :radius='5')
+                .tsy-card-panel 
+                  .name Tian 
+                  .num 21
+              sy-ray-border.ml10(:width='200' :height='300' :radius='5')
+                .tsy-card-panel 
+                  .name UC 
+                  .num 90
+              sy-ray-border.ml10(:width='200' :height='300' :radius='5')
+                .tsy-card-panel 
+                  .name YC 
+                  .num 15
 
       .sticky-animation 
         sticky-animation-one(:scroll-start='1000' :scroll-end='2800' :scroll-value='stickyAnimationOne.scrollValue')
@@ -142,6 +146,9 @@ export default {
  
 
   methods: {
+    goto2(href) {
+      open(href, '_blank')
+    },
     gotoCanvasTraining() {
       window.open(`${this.getPublicPath()}/blog/12/viewer`, "CanvasTraining");
     },
@@ -218,14 +225,6 @@ export default {
 .rolling-image-block
   height: 800px
 
-.calendar-row
-  .calendar-panel
-    width: 300px
-    height: 300px
-
-  .card-panel
-    width: calc(100% - 300px)
-
 .water-drop-container
   margin-top: 50px
   height: 300px
@@ -240,7 +239,7 @@ export default {
   -webkit-text-stroke: 1px white
   text-stroke: 1px white
 
-.tsy-panel
+.tsy-card-panel
   background: red
   height: 100%
   margin: 0
@@ -257,5 +256,9 @@ export default {
   .num
     font-size: 122px
 
-
+.game-image
+  width: 100%
+  height: 100%
+  cursor: pointer
+  display: flex
 </style>
