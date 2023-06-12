@@ -1,6 +1,6 @@
 <template lang="pug">
 .mavon-editor-main
-  mavon-editor.mavon-editor-panel(:model-value='valueComputed' ref='mdRef' @imgAdd="imgAdd" :toolbars='toolbars' @update:model-value='updateValue' v-bind='$attrs')
+  mavon-editor.mavon-editor-panel(:model-value='valueComputed' @update:model-value='updateValue' ref='mdRef' @imgAdd="imgAdd" :toolbars='toolbars'  v-bind='$attrs')
   image-cropper(
     v-if='imageCropperData' 
     :img='imageCropperData.image' 

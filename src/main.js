@@ -8,7 +8,8 @@ import {mavonEditor} from 'mavon-editor'
 import _ from 'lodash'
 
 import utils from "@/utils.js";
-import Editor from "@/components/mavon-editor-wrapper.vue";
+import MarkdownEditor from "@/components/mavon-editor-wrapper.vue";
+import MarkdownViewer from "@/components/markdown-viewer.vue";
 import LinkItem from '@/components/link-item.vue';
 import PanoViewer from "./components/pano-viewer/pano-viewer.vue";
 import ImageCropper from "./components/image-cropper.vue";
@@ -109,7 +110,8 @@ app.use(ElementPlus)
 app.use(VueCropper)
 app.mixin(globalMixin)
 app.component('mavon-editor', mavonEditor)
-app.component('m-editor', Editor)
+app.component('m-editor', MarkdownEditor)
+app.component('m-viewer', MarkdownViewer)
 app.component('pano-viewer', PanoViewer)
 app.component('link-item', LinkItem)
 app.component('image-cropper', ImageCropper)

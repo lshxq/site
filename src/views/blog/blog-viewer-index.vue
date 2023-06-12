@@ -7,15 +7,7 @@
       template(v-slot:right)
         .created {{long2datetime(blog.created)}}
         
-    mavon-editor.mavon-view-panel(
-      :value='blog.content' 
-      default-open='preview'
-      :editable='false'
-      :toolbarsFlag='false'
-      :subfield='false'
-      :boxShadow='false'
-      previewBackground='white'
-      :html='false')
+    m-viewer.mavon-view-panel(:markdown='blog.content')
 </template>
 
 <script>
@@ -32,7 +24,8 @@ export default {
       return this.$route.params.id
     },
     blog() {
-      return _.get(this, 'articalResp.data', {})
+      const markdown = _.get(this, 'articalResp.data', {})
+      return markdown 
     }
   },
   mounted() {
@@ -58,6 +51,7 @@ export default {
 .blog-viewer-index-main
   user-select: none
   background: #fafafa
+  height: 100%
   .narrow
     background: white
     width: 80%
