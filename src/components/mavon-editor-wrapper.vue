@@ -1,18 +1,19 @@
 <template lang="pug">
 .mavon-editor-main
   mavon-editor.mavon-editor-panel(:model-value='valueComputed' @update:model-value='updateValue' ref='mdRef' @imgAdd="imgAdd" :toolbars='toolbars'  v-bind='$attrs')
-  image-cropper(
-    v-if='imageCropperData' 
-    :img='imageCropperData.image' 
-    :fixed-size='false'
-    :max-img-size='800'
-    :image-width='800' 
-    :image-height='500' 
-    @applied='imageUpload'
-    @canceled='imageCanceled')
+  el-dialog(v-if='imageCropperData' v-model='visible' @closed='imageCanceled' width='850')
+    .image-cropper
+      sy-img-cropper(ref='cropperRef' :img='imageCropperData.image')
+    template(v-slot:footer)
+      sy-left-right
+        template(v-slot:right)
+          el-button(type='primary' @click='imageUpload') 确定
+
 </template>
 
 <script>
+import utils from '../utils.js'
+
 export default {
   props: {
     modelValue: String,
@@ -66,6 +67,7 @@ export default {
   data() {
     return {
       imageCropperData: null,
+      visible: true
     };
   },
   computed: {
@@ -89,13 +91,16 @@ export default {
       const md = that.$refs.mdRef;
       md.$imgDel(pos);
     },
-    imageUpload(image) {
+
+    imageUpload() {
+      const base64 = this.$refs.cropperRef.getImageData()
+      const file = utils.dataURLtoFile(base64, 'mavon-img-cropper')
       const that = this;
       const { imageUploadFolder } = that;
       const { pos } = that.imageCropperData;
       const md = that.$refs.mdRef;
       that
-        .upload(image, imageUploadFolder)
+        .upload(file, imageUploadFolder)
         .then((resp) => {
           md.$img2Url(
             pos,
@@ -138,3 +143,10 @@ export default {
   },
 };
 </script>
+
+
+<style lang="sass" scoped>
+.image-cropper
+  width: 100%
+  height: 400px
+</style>

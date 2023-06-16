@@ -42,33 +42,9 @@ export default {
         username: "",
         pass: "",
       },
-      backgrounds: [
-        this.getPanoUrl('00.jpg'),
-        this.getPanoUrl('01.jpg'),
-        this.getPanoUrl('02.jpg'),
-        this.getPanoUrl('03.jpg'),
-        this.getPanoUrl('04.jpg'),
-        this.getPanoUrl('05.jpg'),
-        this.getPanoUrl('06.jpg'),
-        this.getPanoUrl('07.jpg'),
-        this.getPanoUrl('08.jpg'),
-        this.getPanoUrl('09.jpg'),
-        this.getPanoUrl('10.jpg'),
-        this.getPanoUrl('11.jpg'),
-        this.getPanoUrl('12.jpg'),
-        this.getPanoUrl('13.jpg'),
-        this.getPanoUrl('14.jpg'),
-      ]
     }
   },
-  computed: {
-    backgroundComp() {
-      const {
-        backgrounds
-      } = this
-      return backgrounds[Math.floor(Math.random() * backgrounds.length)]
-    }
-  },
+
    methods: {
     login() {
       const that = this

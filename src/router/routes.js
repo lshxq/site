@@ -104,5 +104,10 @@ export default [
     component: () => import("@/views/m-editor-test.vue"),
   },
 
+  {
+    path: "/vue-cropper/test",
+    name: "vue-cropper-test",
+    component: () => import("@/views/vue-cropper-test.vue"),
+  },
   ...learnings,
 ];

@@ -8,19 +8,18 @@ const router = createRouter({
   routes
 })
 
-router.beforeEach((to, from, next) => {
+router.beforeEach(async (to) => {
   const loginNeeded = _.get(to, 'meta.loginNeeded')
   if (loginNeeded) {
     const user = utils.getCurrentUser()
-    if (user) {
-      next()
-    } else {
-      utils.getCurrentUserAsync().then(next).catch(() => {
-        next("/login")
-      })
+    if (!user) {
+      const user = await utils.getCurrentUserAsync()
+      if(!user) {
+        return {
+          name: 'login'
+        }
+      } 
     }
-  } else {
-    next()
   }
 });
 

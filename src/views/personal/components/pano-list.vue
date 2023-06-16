@@ -14,8 +14,8 @@
     :columns='articalColumns'
   )
     template(v-slot:action='scope')
-      el-button(type='primary' size='mini' @click='editPano(scope.data.row)') 编辑
-      el-button(type='success' size='mini' @click='showPano(scope.data.row)') 预览
+      el-button(type='primary' size='small' @click='editPano(scope.data.row)') 编辑
+      el-button(type='success' size='small' @click='showPano(scope.data.row)') 预览
 
 </template>
 

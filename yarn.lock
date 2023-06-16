@@ -6229,10 +6229,10 @@
   "resolved" "https://registry.npmmirror.com/tslib/-/tslib-2.5.3.tgz"
   "version" "2.5.3"
 
-"tsyvue@^0.1.29":
-  "integrity" "sha512-d/nEWOn1tkph2dowEtnHhGVVcZCQJKCxCBeKcTOlw+493gCZchYTistdET+TIszL5xHOGItOUmSnr2kq+PQFEQ=="
-  "resolved" "https://registry.npmjs.org/tsyvue/-/tsyvue-0.1.29.tgz"
-  "version" "0.1.29"
+"tsyvue@^0.1.33":
+  "integrity" "sha512-GbXfBIN0u9R/yEHxKR74WUqr5CE0XJBVOXLJiwhC5PVJHi9sRMhRG8O0KjxGp3POFQcq5GgZ2xnxO9OdZGzlmQ=="
+  "resolved" "https://registry.npmjs.org/tsyvue/-/tsyvue-0.1.33.tgz"
+  "version" "0.1.33"
   dependencies:
     "axios" "^1.4.0"
     "core-js" "^3.8.3"
@@ -6365,10 +6365,10 @@
   "resolved" "https://registry.npmjs.org/void-elements/-/void-elements-3.1.0.tgz"
   "version" "3.1.0"
 
-"vue-cropper@^0.6.2":
-  "integrity" "sha512-p4UGt8U7GnZPm311GmJtVUqDoSVdo1naBayLDkyOjMHuTLRlCtrZoh0pFUy3EQ79hAyT3JB5sx8m49IRfzSckw=="
-  "resolved" "https://registry.npmjs.org/vue-cropper/-/vue-cropper-0.6.2.tgz"
-  "version" "0.6.2"
+"vue-cropper@^1.0.8":
+  "integrity" "sha512-JhQwxmjqmQohzI7sAp5O/Rfdxuw5HOEYkKjnp/De7iCi6c8Mv6M3N9HpMt9xgWCFchX3/DfXBv2axCZOCg3G8Q=="
+  "resolved" "https://registry.npmjs.org/vue-cropper/-/vue-cropper-1.0.9.tgz"
+  "version" "1.0.9"
 
 "vue-demi@*":
   "integrity" "sha512-o9NUVpl/YlsGJ7t+xuqJKx8EBGf1quRhCiT6D/J0pfwmk9zUwYkC7yrF4SZCe6fETvSM3UNL2edcbYrSyc4QHA=="
