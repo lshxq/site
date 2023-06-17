@@ -3,7 +3,6 @@ import App from './App.vue'
 import router from './router'
 import ElementPlus from 'element-plus'
 import tsyvue from 'tsyvue'
-import VueCropper from "vue-cropper"
 import {mavonEditor} from 'mavon-editor'
 import _ from 'lodash'
 
@@ -106,7 +105,6 @@ const app = createApp(App)
 app.use(router)
 app.use(tsyvue)
 app.use(ElementPlus)
-app.use(VueCropper)
 app.mixin(globalMixin)
 app.component('mavon-editor', mavonEditor)
 app.component('m-editor', MarkdownEditor)

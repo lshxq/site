@@ -15,9 +15,10 @@
     "mavon-editor": "^3.0.1",
     "photo-sphere-viewer": "^4.8.1",
     "pug-plain-loader": "^1.1.0",
-    "tsyvue": "^0.1.33",
+    "tsyvue": "^0.1.34",
     "vue": "^3.2.13",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.0.3",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
