@@ -23,7 +23,7 @@ const ob = new IntersectionObserver(entries => {
   for (const entry of entries) {
     if (entry.isIntersecting) {
       const img = entry.target;
-      img.src = `https://picsum.photos/${imgWidth}/300?r=${Math.random()}`
+      img.src = `https://picsum.photos/${imgWidth}/300?${Math.random()}`
       ob.unobserve(img)
     }
   }

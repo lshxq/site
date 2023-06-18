@@ -46,11 +46,11 @@
       
       .mb30.mt30(@click='goto("learning-003")')
         rotate-img(
-          :img1="getUploadedResource('img/20220311102357.jpg')"
-          :img2="getUploadedResource('img/20220311102855.jpg')"
-          :img3="getUploadedResource('img/20220311102907.jpg')"
-          :img4="getUploadedResource('img/20220311102918.jpg')"
-          :img5="getUploadedResource('img/20220311102928.jpg')"
+          :img1="`https://picsum.photos/200/300?${Math.random()}`"
+          :img2="`https://picsum.photos/200/300?${Math.random()}`"
+          :img3="`https://picsum.photos/200/300?${Math.random()}`"
+          :img4="`https://picsum.photos/200/300?${Math.random()}`"
+          :img5="`https://picsum.photos/200/300?${Math.random()}`"
         )
 
       .block-section
@@ -125,14 +125,7 @@ export default {
         type: 2,
         orderBy: "CREATED DESC",
       },
-      rollingImages: [
-        this.getUploadedResource("img/20220311102357.jpg"),
-        this.getUploadedResource("img/20220311102855.jpg"),
-        this.getUploadedResource("img/20220311102907.jpg"),
-        this.getUploadedResource("img/20220311102918.jpg"),
-        this.getUploadedResource("img/20220311102928.jpg"),
-        this.getUploadedResource("img/20220311102938.jpg"),
-      ],
+      rollingImages: this.getImages(10),
 
       stickyAnimationOne: {
         scrollValue: 0
@@ -142,6 +135,13 @@ export default {
  
 
   methods: {
+    getImages(cnt) {
+      const images = []
+      for (let idx=0; idx<cnt; idx++) {
+        images.push(`https://picsum.photos/200/300?${Math.random()}`)
+      }
+      return images
+    },
     goto2(href) {
       open(href, '_blank')
     },
