@@ -1,59 +1,22 @@
 <template lang="pug">
-.pano-viewer-main(v-loading='!pano || loading')
-  pano-viewer(v-if='pano' :img='getUploadedResource(`pano/${pano.file}`)' :cfg='panoCfg')
-  .el-icon-info(@click='drawer.visible = true')
-  el-drawer(title="全景信息" direction='rtl' :visible.sync="drawer.visible")
-    .drawer-panel
-      .pano-info
-        .row
-          .label 标题
-          .value {{pano.title}}
-        .row
-          .label 描述
-          .value 
-            mavon-editor.mavon-view-panel(
-              :value='panoDesc' 
-              default-open='preview'
-              :editable='false'
-              :toolbarsFlag='false'
-              :subfield='false'
-              :boxShadow='false'
-              previewBackground='white'
-              :html='false')
-        .row
-          .label 拍色日期
-          .value {{long2datetime(pano.shotDate)}}
-        .row
-          .label 海拔高度
-          .value {{pano.high}}米
-        .row
-          .label 上传日期
-          .value {{long2datetime(pano.created)}}
-
-      #ditu-container.ditu-panel(v-if='showDitu')
-        baidu-map.h0(:zoom='13' :center=' { lng: pano.longitude, lat: pano.latitude }')
-          bm-navigation(anchor="BMAP_ANCHOR_TOP_LEFT")
-          bm-marker(:position='{lng: pano.longitude, lat: pano.latitude}' :dragging="false" animation="BMAP_ANIMATION_BOUNCE")
-
+.pano-viewer-main(v-loading='loading')
+  pano-veiwer-panel(v-if='pano' :pano='pano' :meta='panoMeta')
 </template>
 
 <script>
-import _ from 'lodash'
+import PanoVeiwerPanel from './components/pano-viewer-panel.vue'
 
 export default {
-  created() {
-    this.panoCfg = {
-      autorotateDelay: 400,
-      autorotateSpeed: "0.1rpm",
-    };
+
+  components: {
+    PanoVeiwerPanel
   },
+
   data() {
     return {
+      panoMeta: false,
       pano: false,
       loading: false,
-      drawer: {
-        visible: false,
-      }
     }
   },
   mounted() {
@@ -63,19 +26,9 @@ export default {
     this.getPanoById(id)
   },
   computed: {
-    panoDesc() {
-      return _.get(this, 'pano.content')
-    },
     id() {
       return this.$route.params.id
     },
-    showDitu() {
-      const {
-        latitude,
-        longitude
-      } = this.pano
-      return latitude && longitude
-    }
 
   },
   methods: {
@@ -84,7 +37,9 @@ export default {
       this.$axios({
         url: `public/pano/${id}`,
       }).then(resp => {
-        this.pano = resp.data
+        this.panoMeta = resp.data
+        this.pano = this.getUploadedResource(`pano/${this.panoMeta.file}`)
+
       }).finally(() => {
         this.loading = false
       })
@@ -108,34 +63,4 @@ export default {
   .el-icon-info:hover
     opacity: .8
 
-.drawer-panel
-  height: 100%
-  position: relative
-  
-  .ditu-panel
-    height: 50%
-    border: 1px solid gray
-    position: absolute
-    bottom: 0
-    right: 0
-    left: 0
-
-  .pano-info
-    overflow: auto
-    height: 50%
-    .row
-      display: flex
-      margin-bottom: 20px
-      .label:after
-        content: ' : '
-      .label
-        flex: 0 0 120px
-        text-align: right
-        padding-right: 10px
-      .value
-        flex: 1 1 auto
-        color: gray
-
-.mavon-view-panel
-  box-shadow：none
 </style>

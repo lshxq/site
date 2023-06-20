@@ -6229,10 +6229,10 @@ tslib@^2.0.3:
   resolved "https://registry.npmmirror.com/tslib/-/tslib-2.5.3.tgz"
   integrity sha512-mSxlJJwl3BMEQCUNnxXBU9jP4JBktcEGhURcPR6VQVlnP0FdDEsIaz0C35dXNGLyRfrATNofF0F5p2KPxQgB+w==
 
-tsyvue@^0.1.35:
-  version "0.1.35"
-  resolved "https://registry.npmjs.org/tsyvue/-/tsyvue-0.1.35.tgz"
-  integrity sha512-ugaf7PgqEvi7ro2YJ2+mscQyr4ccD8AobgEFFibcbd/dxzKHEmGJbMN/HUmhzLfPE282Cq5E8qBHPVMJlVBphw==
+tsyvue@^0.1.37:
+  version "0.1.37"
+  resolved "https://registry.npmjs.org/tsyvue/-/tsyvue-0.1.37.tgz"
+  integrity sha512-q7hpaSn1ZAbomAzisHScGM2EZZwsSzCcu/BipX64T4pPdTB/NAbLct+p+qI7xowtpkZ0m5rt/fgCiOldDwQjjA==
   dependencies:
     axios "^1.4.0"
     core-js "^3.8.3"
