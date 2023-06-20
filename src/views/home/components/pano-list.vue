@@ -6,9 +6,8 @@
         .item(v-for='(pano, idx) of scope.data' :key='idx')
           pano-viewer(:img='getUploadedResource(`pano/${pano.preview}`)' :cfg='panoCfg')
           .title-bar 
-            sy-left-right
-              template(slot='left') {{pano.title}}
-              template(slot='right') 海拔{{pano.high}}米
+            .left {{pano.title}}
+            .right 海拔{{pano.high}}米
           .mask(@click='showPano(pano)')
             .text 显示全景
 
@@ -59,6 +58,8 @@ export default {
       right: 0
       padding: 5px 10px
       background-color: rgba(0, 0, 0, .6)
+      display: flex
+      justify-content: space-between
     .mask
       position: absolute
       top: 0
