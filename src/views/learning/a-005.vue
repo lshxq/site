@@ -1,16 +1,7 @@
 <template lang="pug">
 .learning005-main(v-resize='updateSize')
   
-  
-  m-editor.mavon-view-panel(
-    :value='text' 
-    default-open='preview'
-    :editable='false'
-    :toolbarsFlag='false'
-    :subfield='false'
-    :boxShadow='false'
-    previewBackground='white'
-    :html='false')
+  m-viewer(:markdown='text')
 
   .ball(ref='ballRef')
 </template>

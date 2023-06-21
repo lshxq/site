@@ -25,15 +25,7 @@
     .girl-block
       img.girl-pic(:src='`${getPublicPath()}/assets/girl.png`' height='400' :style='girlStyleComp')
 
-  m-editor.mavon-view-panel(
-    :value='text' 
-    default-open='preview'
-    :editable='false'
-    :toolbarsFlag='false'
-    :subfield='false'
-    :boxShadow='false'
-    previewBackground='white'
-    :html='false')
+  m-viewer(:markdown='text')
 </template>
 
 <script>

@@ -5,15 +5,7 @@
   .color-block(:style='blockStyleComputed') 
   .mb30.ml30 {{sRGBHex}}
 
-  m-editor.mavon-view-panel(
-    :value='text' 
-    default-open='preview'
-    :editable='false'
-    :toolbarsFlag='false'
-    :subfield='false'
-    :boxShadow='false'
-    previewBackground='white'
-    :html='false')
+  m-viewer(:markdown='text')
 </template>
 
 <script>

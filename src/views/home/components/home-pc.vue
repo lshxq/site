@@ -46,11 +46,11 @@
       
       .mb30.mt30(@click='goto("learning-003")')
         rotate-img(
-          :img1="`https://picsum.photos/200/300?${Math.random()}`"
-          :img2="`https://picsum.photos/200/300?${Math.random()}`"
-          :img3="`https://picsum.photos/200/300?${Math.random()}`"
-          :img4="`https://picsum.photos/200/300?${Math.random()}`"
-          :img5="`https://picsum.photos/200/300?${Math.random()}`"
+          :img1="`https://picsum.photos/300/300?${Math.random()}`"
+          :img2="`https://picsum.photos/300/300?${Math.random()}`"
+          :img3="`https://picsum.photos/300/300?${Math.random()}`"
+          :img4="`https://picsum.photos/300/300?${Math.random()}`"
+          :img5="`https://picsum.photos/300/300?${Math.random()}`"
         )
 
       .block-section

@@ -1,22 +1,14 @@
 <template lang="pug">
 .learning003-main 
   rotate-img(
-    :img1="getUploadedResource('img/20220311102357.jpg')"
-    :img2="getUploadedResource('img/20220311102855.jpg')"
-    :img3="getUploadedResource('img/20220311102907.jpg')"
-    :img4="getUploadedResource('img/20220311102918.jpg')"
-    :img5="getUploadedResource('img/20220311102928.jpg')"
+    :img1="`https://picsum.photos/300/300?${Math.random()}`"
+    :img2="`https://picsum.photos/300/300?${Math.random()}`"
+    :img3="`https://picsum.photos/300/300?${Math.random()}`"
+    :img4="`https://picsum.photos/300/300?${Math.random()}`"
+    :img5="`https://picsum.photos/300/300?${Math.random()}`"
   )
   
-  m-editor.mavon-view-panel(
-    :value='text' 
-    default-open='preview'
-    :editable='false'
-    :toolbarsFlag='false'
-    :subfield='false'
-    :boxShadow='false'
-    previewBackground='white'
-    :html='false')
+  m-viewer(:markdown='text')
 </template>
 
 <script>

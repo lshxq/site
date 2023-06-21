@@ -1,15 +1,7 @@
 <template lang="pug">
 .learning-006-main
   .editor-panel
-    m-editor.mavon-view-panel(
-      :value='text' 
-      default-open='preview'
-      :editable='false'
-      :toolbarsFlag='false'
-      :subfield='false'
-      :boxShadow='false'
-      previewBackground='white'
-      :html='false')
+    m-viewer(:markdown='text')
   .image-block(v-resize='updateSize')
     template(v-for='idx in 1000' :key='idx')
       img.image-obj( :src='`${getPublicPath()}/assets/new-york.webp`'  draggable='false')
