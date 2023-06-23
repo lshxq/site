@@ -35,7 +35,7 @@ const rangeMapping = (range1, range2, value) => {
   }
 };
 
-const strs = ["多年全栈开发经验", "寻求兼职工作机会", "微信：tsycuu"];
+const strs = ["多年全栈开发经验", "精通微信小程序开发", "助力社区小店商品上线", "微信：tsycuu"];
 
 const rr = (min = 0, max = 100) => {
   const range = max - min;
