@@ -1090,6 +1090,11 @@
   resolved "https://registry.npmmirror.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
+"@imgly/background-removal@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/@imgly/background-removal/-/background-removal-1.0.3.tgz"
+  integrity sha512-G92dSF7gCFXidxUlkLqfa9DDex6oEjJnU//x6wXwCxI8O+oV+86XRht2jiGye9W8TvpYNg7uPynqnhU3f14BuQ==
+
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.npmmirror.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz"

@@ -35,6 +35,8 @@
                   .name YC 
                   .num 15
 
+      background-removal.mt30.mb30
+
       .sticky-animation 
         sticky-animation-one(:scroll-start='1000' :scroll-end='2800' :scroll-value='stickyAnimationOne.scrollValue')
 
@@ -102,10 +104,12 @@ import NewYork from "@/comps/new-york.vue";
 import GridLayout from "@/comps/grid-layout.vue";
 import RotateImg from "@/comps/rotate-img.vue";
 import StickyAnimationOne from '@/comps/sticky-animation-2.vue' 
+import BackgroundRemoval from "./background-removal.vue";
 
 export default {
   name: "App",
   components: {
+    BackgroundRemoval,
     StickyAnimationOne,
     GridLayout,
     RotateImg,
